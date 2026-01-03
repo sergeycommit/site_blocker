@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="SiteBlocker extension installation guide - Stay focused and productive by blocking distracting websites.">
+    <title>SiteBlocker Installed - Installation Guide</title>
+    <link rel="icon" type="image/png" href="../images/icon128.png">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                Helvetica, Arial, sans-serif, "Apple Color Emoji",
+                "Segoe UI Emoji", "Segoe UI Symbol";
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f8f9fa, #e8f0fe);
+            min-height: 100vh;
+            color: #202124;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 3em;
+            color: #1a73e8;
+            margin: 0 0 10px 0;
+            font-weight: 500;
+            text-shadow: 0 2px 4px rgba(26, 115, 232, 0.1);
+        }
+
+        .subtitle {
+            font-size: 1.3em;
+            color: #5f6368;
+            margin-bottom: 30px;
+        }
+
+        .step {
+            background: white;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+            border-left: 4px solid #1a73e8;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .step:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .step-number {
+            display: inline-block;
+            background: #1a73e8;
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 32px;
+            font-weight: bold;
+            margin-right: 12px;
+        }
+
+        .step h2 {
+            color: #1a73e8;
+            margin: 0 0 15px 0;
+            font-size: 1.4em;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+        }
+
+        .step p {
+            font-size: 1.1em;
+            margin: 10px 0;
+            color: #3c4043;
+        }
+
+        .step-image {
+            max-width: 80%;
+            height: auto;
+            display: block;
+            margin: 25px auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+            border: 1px solid #e8eaed;
+        }
+
+        .final-message {
+            text-align: center;
+            background: linear-gradient(135deg, #e6f4ea, #e8f5e8);
+            padding: 30px;
+            border-radius: 16px;
+            margin: 40px 0;
+            border: 1px solid #81c995;
+        }
+
+        .final-message h2 {
+            color: #137333;
+            margin: 0 0 15px 0;
+            font-size: 1.5em;
+        }
+
+        .final-message p {
+            color: #174ea6;
+            font-size: 1.1em;
+            margin: 8px 0;
+        }
+
+        .emoji {
+            font-size: 1.2em;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px 15px;
+            }
+
+            .header h1 {
+                font-size: 2.2em;
+            }
+
+            .step {
+                padding: 20px;
+            }
+
+            .step-image {
+                max-width: 95%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎉 SiteBlocker Installed!</h1>
+            <p class="subtitle">Your browser extension is ready to help you stay focused and productive</p>
+        </div>
+
+        <div class="step">
+            <h2><span class="step-number">1</span> Pin Extension to Toolbar</h2>
+            <p>Click the puzzle piece <span class="emoji">🧩</span> in the top right corner of your browser, then click
+                the pin <span class="emoji">📌</span> next to SiteBlocker to keep it visible:</p>
+            <img src="../images/wp1.png" alt="Pin SiteBlocker Extension to Browser Toolbar" class="step-image">
+        </div>
+
+        <div class="step">
+            <h2><span class="step-number">2</span> Start Blocking Distractions</h2>
+            <p>Click the SiteBlocker icon <span class="emoji">🚫</span> to set up your blocklist, create categories, and
+                manage access schedules:</p>
+            <img src="../images/wp2.png" alt="Use SiteBlocker Extension Interface" class="step-image">
+        </div>
+
+        <div class="final-message">
+            <h2>🚀 You're All Set!</h2>
+            <p><strong>SiteBlocker is now ready to use!</strong></p>
+            <p>✨ <strong>Pro Tip:</strong> Use "Strict Mode" with password protection if you need an extra layer of
+                self-discipline.</p>
+            <p>🛡️ <strong>Benefits:</strong> Minimize distractions, improve focus, and build better digital habits.</p>
+        </div>
+    </div>
+
+    <!-- Analytics (optional, keeping original structure) -->
+    <script>
+        (function () {
+          const UMAMI_WEBSITE_ID = "eabecfd3-782f-4c75-97b9-a1b50f1792c8";
+          const UMAMI_ENDPOINT = "https://cloud.umami.is/api/send";
+        
+          function sendEvent(eventName, url = "/installed") {
+            fetch(UMAMI_ENDPOINT, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json"
+              },
+              body: JSON.stringify({
+                type: "event",
+                payload: {
+                  website: UMAMI_WEBSITE_ID,
+                  hostname: "chrome-extension",
+                  language: navigator.language,
+                  screen: `${screen.width}x${screen.height}`,
+                  url,
+                  name: eventName
+                }
+              })
+            }).catch(() => {});
+          }
+        
+          // install page opened
+          sendEvent("install_page_opened");
+        
+          // first interaction
+          document.addEventListener(
+            "click",
+            () => sendEvent("install_page_interaction"),
+            { once: true }
+          );
+        })();
+        </script>
+        
+</body>
+
+</html>
