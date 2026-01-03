@@ -175,43 +175,7 @@
     </div>
 
     <!-- Analytics (optional, keeping original structure) -->
-    <script>
-        (function () {
-          const UMAMI_WEBSITE_ID = "eabecfd3-782f-4c75-97b9-a1b50f1792c8";
-          const UMAMI_ENDPOINT = "https://cloud.umami.is/api/send";
-        
-          function sendEvent(eventName, url = "/installed") {
-            fetch(UMAMI_ENDPOINT, {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json"
-              },
-              body: JSON.stringify({
-                type: "event",
-                payload: {
-                  website: UMAMI_WEBSITE_ID,
-                  hostname: "chrome-extension",
-                  language: navigator.language,
-                  screen: `${screen.width}x${screen.height}`,
-                  url,
-                  name: eventName
-                }
-              })
-            }).catch(() => {});
-          }
-        
-          // install page opened
-          sendEvent("install_page_opened");
-        
-          // first interaction
-          document.addEventListener(
-            "click",
-            () => sendEvent("install_page_interaction"),
-            { once: true }
-          );
-        })();
-        </script>
-        
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="26e3af01-6576-4b98-9dac-b327e9e302cd"></script>
 </body>
 
 </html>
